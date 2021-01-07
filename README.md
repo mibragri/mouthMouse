@@ -88,15 +88,13 @@ If you also use the ST7735 display you will need a ["Wago Klemme"](https://smile
 * VRX connects to Pin G33
 * VRY connects to Pin G35
 * SW connects to Pin G21
-[]()
 ### How to wire the water flow sensor
 This one is pretty simple.
 * Red to 5V or to a Wago Klemme if you use the display.
 * Black to GND
 * Yellow to G32
-[]()
 ### How to wire the display
-Check the uploaded [picture](#) if you'd like else it does as:
+Check the uploaded [picture](https://github.com/mibragri/mouthMouse/blob/main/wiring/wire-display.png) if you'd like else it does as:
 * 3V to WAGO Klemme
 * RESET  to G14
 * GND to GND
@@ -106,4 +104,6 @@ Check the uploaded [picture](#) if you'd like else it does as:
 * CS to G17
 * A0 to G2
 ### ESP32 Pin Overview
+[](https://github.com/mibragri/mouthMouse/blob/main/wiring/ESP32-Pins.png)
+### Fritzing
 []()
