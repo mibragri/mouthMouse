@@ -104,6 +104,6 @@ Check the uploaded [picture](https://github.com/mibragri/mouthMouse/blob/main/wi
 * CS to G17
 * A0 to G2
 ### ESP32 Pin Overview
-[](https://github.com/mibragri/mouthMouse/blob/main/wiring/ESP32-Pins.png)
+[ESP32 Pin Overview](https://github.com/mibragri/mouthMouse/blob/main/wiring/ESP32-Pins.png)
 ### Fritzing
 []()
