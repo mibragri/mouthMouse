@@ -6,7 +6,7 @@ The extreme case, where people cannot move or hold their head, their head needs 
 These people are also artificially respirated, which means they cannot puff air, but are limited to use the available air in their mouth and contract their cheeks to simulate puffing.
 ## What is the intention of this project
 Such commercial mice can be very expensive up to 2.200 EUR (what I have seen). Not all insurance pay for this. They pay in Germany for instance but not in Austria.
-This mouse is approx. 22 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR]). The code to make this work is for free and will be kept freely available forever.
+This mouse is approx. 29 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR], wires [7 EUR]). The code to make this work is for free and will be kept freely available forever.
 It is intended to make this available at no cost, but the parts one needs to buy. It is kept very simplistic in terms of required parts, which are available everywhere to make sure everyone has access and is able to build this.
 ## What are the features of the mouse
 * Bluetooth connectivity, no cables to the PC, hence you can use distant large screens, like the TV with a Raspberry for instance, which has bluetooth build in.
@@ -24,6 +24,7 @@ You will need to get the following:
 * [ESP32](https://smile.amazon.de/AZDelivery-ESP32-NodeMCU-gratis-eBook/dp/B07Z83MF5W/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=esp32+azdelivery&qid=1610048309&sr=8-4) - 10 EUR
 * [Joystick](https://smile.amazon.de/gp/product/B07CKCBHF4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) - 2 EUR
 * [Water Flow Sensor](https://smile.amazon.de/gp/product/B073VJQMJJ/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) - 10 EUR
+* [DuPont Cables also names Jumper Wires](https://smile.amazon.de/Female-Female-Male-Female-Male-Male-Steckbr%C3%BCcken-Drahtbr%C3%BCcken-bunt/dp/B01EV70C78/ref=sr_1_18?dchild=1&keywords=dupont&qid=1610058026&sr=8-18) - 7 EUR
 * Optional: [Display](https://smile.amazon.de/gp/product/B078J5TS2G/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - 7.50 EUR
 * Optional: [Microphone Stand](https://smile.amazon.de/Adam-Stands-S5B-Mikrofonst%C3%A4nder-Schwenkarm/dp/B001W6WDNI/ref=psdc_5759560031_t1_B019NY2PKG) - 15 EUR
 * Optional: [Raspberry PI 4 with 4GB](https://smile.amazon.de/Raspberry-Pi-ARM-Cortex-A72-Bluetooth-Micro-HDMI/dp/B07TC2BK1X/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10TENZVLWRRGR&dchild=1&keywords=raspberry+pi+4&qid=1610051320&quartzVehicle=812-409&replacementKeywords=raspberry+pi&sprefix=raspberry+%2Caps%2C195&sr=8-3) at approx 60 EUR - no case, power supply, neither HDMI cable included. Sets vary between 100-120 EUR.
@@ -78,4 +79,31 @@ exit
 That's it. You should see the pointer moving now. You will however not see the mouse as "paired" in the bluetooth icon on the taskbar. If you pair it will not reconnect successfully after rebooting either the Raspberry or the mouse. Pairing is also not necessary for this to work.
 ## Problems with flashing
 If the flashing times out you may need to keep the "boot" button pressed until the connection is successfully established. Also never use Pin 0 - any connection to Pin 0 can cause issues with uploading or updating your py files later. 
-
+## Pictures
+### How to wire the joystick
+Despite that the chip (KY-023) labels with 5V, 3.3V are correct and work with the settings in the joystick.py and the move ranges in main.py.
+If you also use the ST7735 display you will need a ["Wago Klemme"](https://smile.amazon.de/gp/product/B0107SYYGU/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1). This is necessary since the 5V and 3.3V Pins only exist once. The Wago Klemme will allow you to connect more than one device.
+* 5V connects to the Wago Klemme which in turn connects to 3.3V.
+* GND connects to any GND on the ESP32. There is no need for a Wago Klemme, since the amount of GND Pins on the ESP32 is sufficient for this project.
+* VRX connects to Pin G33
+* VRY connects to Pin G35
+* SW connects to Pin G21
+[]()
+### How to wire the water flow sensor
+This one is pretty simple.
+* Red to 5V or to a Wago Klemme if you use the display.
+* Black to GND
+* Yellow to G32
+[]()
+### How to wire the display
+Check the uploaded [picture](#) if you'd like else it does as:
+* 3V to WAGO Klemme
+* RESET  to G14
+* GND to GND
+* LED to 5V Wago Klemme
+* SDA to G23
+* SCK to G18
+* CS to G17
+* A0 to G2
+### ESP32 Pin Overview
+[]()
