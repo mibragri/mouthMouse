@@ -1,14 +1,14 @@
-## What is a Mouth Mouse / Mundmaus
+## What is a Mouth Mouse / Mundmaus?
 The mouth mouse is intended for handicapped people, which suffer for instance tetraplegia. Instead of using their extremities, they use their mouth and tounge inlcuding puffing to control the mouse motion and clicking.
-## What is tetraplegia
+## What is tetraplegia?
 These people for instance cannot move any of their extermities up to very severe cases, where they can neither move nor hold their head, which means their available movements are very limited.
 The extreme case, where people cannot move or hold their head, their head needs to be fixed with a strap band. They are only able to do facials, use their mouth, their tounge.
 These people are also artificially respirated, which means they cannot puff air, but are limited to use the available air in their mouth and contract their cheeks to simulate puffing.
-## What is the intention of this project
+## What is the intention of this project?
 Such commercial mice can be very expensive up to 2.200 EUR (what I have seen). Not all insurance pay for this. They pay in Germany for instance but not in Austria.
 This mouse is approx. 29 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR], wires [7 EUR]). The code to make this work is for free and will be kept freely available forever.
 It is intended to make this available at no cost, but the parts one needs to buy. It is kept very simplistic in terms of required parts, which are available everywhere to make sure everyone has access and is able to build this.
-## What are the features of the mouse
+## What are the features of the mouse?
 * Bluetooth connectivity, no cables to the PC, hence you can use distant large screens, like the TV with a Raspberry for instance, which has bluetooth build in.
 * Puffing is clicking in click mode. In Drag'n'Drop mode one puff picks the object, like a window or a card in a card game for instance. A second puff will release it where the pointer was moved to.
 * The joystick is used to move the mouse pointer.
@@ -16,6 +16,8 @@ It is intended to make this available at no cost, but the parts one needs to buy
 Simply because the ESP32 cannot be run as a USB device like the pyboard, hence I had to find an alternative. Eventually this is more practical, since less cabling and longer USB cables may result into problems with a Microcomputer like this.
 ## How did I use it?
 I used a Raspberry PI 3B running Raspbian as the computer connected to the TV. The mouse you will build is then connected via Bluetooth to the Raspberry. It will always automatically reconnect, hence super simple to use. If you opt for the Display you will see status messages.
+## Can this be used in a different setup?
+Absolutely. Assume you can use your fingers, but not move your arm, the setup can be adjusted to use the joystick for clicking and double blick, also drag and drop. Alternatively, separate buttons for the other hand can be added for left and right click, also for instance a third one for drag and drop if holding a button is too difficult.
 ## Can I contribute?
 Absolutely. I am not a professionial developer and appreciate coding feedback, input and suggestions as well as contributions. If there are other ideas or better ideas, let's collaborate and improve life of severly impacted humand beings instead of looking for their money!
 ## Technologies
@@ -104,6 +106,5 @@ Check the uploaded [picture](https://github.com/mibragri/mouthMouse/blob/main/wi
 * CS to G17
 * A0 to G2
 ### ESP32 Pin Overview
+Unfortunately in German, but I am sure feasible to understand. I use ESP32s from AZ Delivery in case you want to try to find an English version.
 ![ESP32 Pin Layout](https://github.com/mibragri/mouthMouse/blob/main/wiring/ESP32-Pins.png)
-### Fritzing
-[]()
