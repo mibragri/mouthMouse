@@ -58,11 +58,24 @@ Now since the "operating system" is successfully uploaded, you need to copy all 
 ```
 sudo rshell --buffer-size=30 -p /dev/ttyUSB0 rsync -m . /pyboard
 ```
-Thats it... if you cabled everything correctly you can follow your mouse booting using screen:
+If you cabled everything correctly you can follow your mouse booting using screen:
 ```
 sudo screen /dev/ttyUSB0 115200
 ```
 To exit screen and release the block on the tty for an additional file sync, simple press `CTRL-A` followed by `k` and confirm with `y`
+Last not least we need to connect the mouse to the Raspberry. You need at least kernel 5.10. Version 5.4 is buggy. You can upgrade from 5.4 to 5.10 using `rpi-update`. There will be warnings you will need to accept. To connect the mouse we need bluetoothctl which we first need to install.
+```
+sudo apt install bluetoothctl
+```
+After that we need to trust and connect to the mouse after scanning for it. You will need to replace "mac" with the MAC address. Once bluetoothctl start the next commands are part of this extra command "shell".
+```
+bluetoothctl
+scan on
+trust "mac"
+connect "mac"
+exit
+```
+That's it. You should see the pointer moving now. You will however not see the mouse as "paired" in the bluetooth icon on the taskbar. If you pair it will not reconnect successfully after rebooting either the Raspberry or the mouse. Pairing is also not necessary for this to work.
 ## Problems with flashing
 If the flashing times out you may need to keep the "boot" button pressed until the connection is successfully established. Also never use Pin 0 - any connection to Pin 0 can cause issues with uploading or updating your py files later. 
 
