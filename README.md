@@ -28,8 +28,8 @@ You will need to get the following:
 * [Thumb Joystick](https://smile.amazon.de/gp/product/B07CKCBHF4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) - 2 EUR
 * [Water Flow Sensor](https://smile.amazon.de/gp/product/B073VJQMJJ/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) - 10 EUR
 * [DuPont Cables also names Jumper Wires](https://smile.amazon.de/Female-Female-Male-Female-Male-Male-Steckbr%C3%BCcken-Drahtbr%C3%BCcken-bunt/dp/B01EV70C78/ref=sr_1_18?dchild=1&keywords=dupont&qid=1610058026&sr=8-18) - 7 EUR
-* [T-fitting from Gardena](https://smile.amazon.de/gp/product/B0001E3ZRU/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)  to sit on top if the Joystick instead of the thumb piece, glue with hot melt gun (Heißklebepistole) and seal before the T connection to the water flow sensor. Remove lower part, see picture - 2.50 EUR per piece
-* Tube from water flow sensor (inner diameter 7mm), see picture. I used a piece of the (german: Rektalkatheter) rectal catheter
+* [T-fitting from Gardena](https://smile.amazon.de/gp/product/B0001E3ZRU/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)  to sit on top if the Joystick instead of the thumb piece, glue with hot melt gun (Heißklebepistole) and seal before the T connection to the water flow sensor. Remove lower part, see [picture](https://github.com/mibragri/mouthMouse/blob/main/pictures/SideView-MouthMouse.jpeg) - 2.50 EUR per piece
+* Tube from water flow sensor (inner diameter 7mm), see [picture](https://github.com/mibragri/mouthMouse/blob/main/pictures/SideView-MouthMouse.jpeg). I used a piece of the (german: Rektalkatheter) rectal catheter
 * [Silicon tube from rectal catheter tube after water flow sensor to the T-fitting from Gardena](https://smile.amazon.de/gp/product/B07SN9P63W/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) - 3 EUR. This is quite important, since the inner diameter needs to fit the T-fitting, must be wide enough for easy puffing because of resistance. Silikon keeps it very flexible to not influence and put pressure on the Jostick.
 * Optional: [Display](https://smile.amazon.de/gp/product/B078J5TS2G/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - 7.50 EUR. If you use the display you can see if bluetooth (ble) is successfully connected, amount of clicks and if the mode was switched to drag and drop or is in regular clicking mode.
 * Optional: [Microphone Stand](https://smile.amazon.de/Adam-Stands-S5B-Mikrofonst%C3%A4nder-Schwenkarm/dp/B001W6WDNI/ref=psdc_5759560031_t1_B019NY2PKG) - 15 EUR
@@ -85,9 +85,11 @@ exit
 That's it. You should see the pointer moving now. You will however not see the mouse as "paired" in the bluetooth icon on the taskbar. If you pair it will not reconnect successfully after rebooting either the Raspberry or the mouse. Pairing is also not necessary for this to work.
 ## Problems with flashing
 If the flashing times out you may need to keep the "boot" button pressed until the connection is successfully established. Also never use Pin 0 - any connection to Pin 0 can cause issues with uploading or updating your py files later. 
-## Pictures
+## Wiring and pictures
+Below you'll find how to wire everything from the individual devices to the ESP32 board and respective Pins. If you use the display you will need the "Wago Klemme" as described below.
+In the [pictures](https://github.com/mibragri/mouthMouse/blob/main/pictures) folder you will get an impression on how to assemble everything. I used a wood piece to put everything together. I am currently working on a 3D print model with a friend to further improve the setup. Once available I will share additional pictures and the 3D model so you can either print yourself or ask somebody you know.
 ### How to wire the joystick
-Despite that the chip (KY-023) labels with 5V, 3.3V are correct and work with the settings in the joystick.py and the move ranges in main.py.
+Despite that the chip (KY-023) labels with 5V, 3.3V are correct and work with the settings in the joystick.py and the move ranges in main.py, so please connect to 3.3V and not 5V.
 If you also use the ST7735 display you will need a ["Wago Klemme"](https://smile.amazon.de/gp/product/B0107SYYGU/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1). This is necessary since the 5V and 3.3V Pins only exist once. The Wago Klemme will allow you to connect more than one device.
 * 5V connects to the Wago Klemme which in turn connects to 3.3V.
 * GND connects to any GND on the ESP32. There is no need for a Wago Klemme, since the amount of GND Pins on the ESP32 is sufficient for this project.
