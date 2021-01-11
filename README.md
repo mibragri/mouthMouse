@@ -1,6 +1,6 @@
 ## What is a Mouth Mouse / Mundmaus?
 The mouth mouse is intended for handicapped people, which suffer for instance tetraplegia. Instead of using their extremities, they use their mouth and tounge inlcuding puffing to control the mouse motion and clicking.
-![Front Full View](https://github.com/mibragri/mouthMouse/blob/main/pictures/FullView-MouthMouse.jpg)
+![Top View Mouth Mouse](https://github.com/mibragri/mouthMouse/blob/main/pictures/TopView-MouthMouse.jpeg)
 ## What is tetraplegia?
 These people for instance cannot move any of their extermities up to very severe cases, where they can neither move nor hold their head, which means their available movements are very limited.
 The extreme case, where people cannot move or hold their head, their head needs to be fixed with a strap band. They are only able to do facials, use their mouth, their tounge.
