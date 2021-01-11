@@ -1,16 +1,17 @@
 ## What is a Mouth Mouse / Mundmaus?
 The mouth mouse is intended for handicapped people, which suffer for instance tetraplegia. Instead of using their extremities, they use their mouth and tounge inlcuding puffing to control the mouse motion and clicking.
+![Front Full View](https://github.com/mibragri/mouthMouse/blob/main/pictures/FullView-MouthMouse.jpg)
 ## What is tetraplegia?
 These people for instance cannot move any of their extermities up to very severe cases, where they can neither move nor hold their head, which means their available movements are very limited.
 The extreme case, where people cannot move or hold their head, their head needs to be fixed with a strap band. They are only able to do facials, use their mouth, their tounge.
 These people are also artificially respirated, which means they cannot puff air, but are limited to use the available air in their mouth and contract their cheeks to simulate puffing.
 ## What is the intention of this project?
-Such commercial mice can be very expensive up to 2.200 EUR (what I have seen). Not all insurance pay for this. They pay in Germany for instance but not in Austria.
-This mouse is approx. 29 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR], wires [7 EUR]). The code to make this work is for free and will be kept freely available forever.
+Such commercial mice can be very expensive up to 2.160 EUR (what I have seen). Not all health insurances pay for this. They pay in Germany, Switzerland, Denmark, Norway and Sweden for instance but not in Austria.
+This mouse is approx. 32 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR], wires [7 EUR], silicon tube [3 EUR]). The code to make this work is for free and will be kept freely available forever.
 It is intended to make this available at no cost, but the parts one needs to buy. It is kept very simplistic in terms of required parts, which are available everywhere to make sure everyone has access and is able to build this.
 ## What are the features of the mouse?
 * Bluetooth connectivity, no cables to the PC, hence you can use distant large screens, like the TV with a Raspberry for instance, which has bluetooth build in.
-* Puffing is clicking in click mode. In Drag'n'Drop mode one puff picks the object, like a window or a card in a card game for instance. A second puff will release it where the pointer was moved to.
+* Puffing is clicking in click mode. In Drag'n'Drop mode (activated by pressing the joystick down - feels like a click) one puff picks the object, like a window or a card in a card game for instance. A second puff will release it where the pointer was moved to.
 * The joystick is used to move the mouse pointer.
 ## Why bluetooth?
 Simply because the ESP32 cannot be run as a USB device like the pyboard, hence I had to find an alternative. Eventually this is more practical, since less cabling and longer USB cables may result into problems with a Microcomputer like this.
@@ -24,10 +25,13 @@ Absolutely. I am not a professionial developer and appreciate coding feedback, i
 Everything is based on an ESP32 (think of it as a Microcomputer) and Micropython.
 You will need to get the following:
 * [ESP32](https://smile.amazon.de/AZDelivery-ESP32-NodeMCU-gratis-eBook/dp/B07Z83MF5W/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=esp32+azdelivery&qid=1610048309&sr=8-4) - 10 EUR
-* [Joystick](https://smile.amazon.de/gp/product/B07CKCBHF4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) - 2 EUR
+* [Thumb Joystick](https://smile.amazon.de/gp/product/B07CKCBHF4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) - 2 EUR
 * [Water Flow Sensor](https://smile.amazon.de/gp/product/B073VJQMJJ/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) - 10 EUR
 * [DuPont Cables also names Jumper Wires](https://smile.amazon.de/Female-Female-Male-Female-Male-Male-Steckbr%C3%BCcken-Drahtbr%C3%BCcken-bunt/dp/B01EV70C78/ref=sr_1_18?dchild=1&keywords=dupont&qid=1610058026&sr=8-18) - 7 EUR
-* Optional: [Display](https://smile.amazon.de/gp/product/B078J5TS2G/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - 7.50 EUR
+* [T-fitting from Gardena](https://smile.amazon.de/gp/product/B0001E3ZRU/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)  to sit on top if the Joystick instead of the thumb piece, glue with hot melt gun (Heißklebepistole) and seal before the T connection to the water flow sensor. Remove lower part, see picture - 2.50 EUR per piece
+* Tube from water flow sensor (inner diameter 7mm), see picture. I used a piece of the (german: Rektalkatheter) rectal catheter
+* [Silicon tube from rectal catheter tube after water flow sensor to the T-fitting from Gardena](https://smile.amazon.de/gp/product/B07SN9P63W/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) - 3 EUR. This is quite important, since the inner diameter needs to fit the T-fitting, must be wide enough for easy puffing because of resistance. Silikon keeps it very flexible to not influence and put pressure on the Jostick.
+* Optional: [Display](https://smile.amazon.de/gp/product/B078J5TS2G/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) - 7.50 EUR. If you use the display you can see if bluetooth (ble) is successfully connected, amount of clicks and if the mode was switched to drag and drop or is in regular clicking mode.
 * Optional: [Microphone Stand](https://smile.amazon.de/Adam-Stands-S5B-Mikrofonst%C3%A4nder-Schwenkarm/dp/B001W6WDNI/ref=psdc_5759560031_t1_B019NY2PKG) - 15 EUR
 * Optional: [Raspberry PI 4 with 4GB](https://smile.amazon.de/Raspberry-Pi-ARM-Cortex-A72-Bluetooth-Micro-HDMI/dp/B07TC2BK1X/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10TENZVLWRRGR&dchild=1&keywords=raspberry+pi+4&qid=1610051320&quartzVehicle=812-409&replacementKeywords=raspberry+pi&sprefix=raspberry+%2Caps%2C195&sr=8-3) at approx 60 EUR - no case, power supply, neither HDMI cable included. Sets vary between 100-120 EUR.
 * Optional: [Battery for ESP32 instead of USB cable](https://smile.amazon.de/gp/product/B0822Q4VS4/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) - 10.50 EUR, alternative with [4 Batteries](https://smile.amazon.de/gp/product/B082MFWC7H/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) at 14.90 EUR
