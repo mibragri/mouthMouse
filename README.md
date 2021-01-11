@@ -22,7 +22,7 @@ Absolutely. Assume you can use your fingers, but not move your arm, the setup ca
 ## Can I contribute?
 Absolutely. I am not a professionial developer and appreciate coding feedback, input and suggestions as well as contributions. If there are other ideas or better ideas, let's collaborate and improve life of severly impacted humand beings instead of looking for their money!
 ## Technologies
-Everything is based on an ESP32 (think of it as a Microcomputer) and Micropython.
+Everything is based on an ESP32 (think of it as a Microcomputer) and [MicroPython](https://www.micropython.org/) as the programming language.
 You will need to get the following:
 * [ESP32](https://smile.amazon.de/AZDelivery-ESP32-NodeMCU-gratis-eBook/dp/B07Z83MF5W/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=esp32+azdelivery&qid=1610048309&sr=8-4) - 10 EUR
 * [Thumb Joystick](https://smile.amazon.de/gp/product/B07CKCBHF4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) - 2 EUR
