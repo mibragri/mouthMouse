@@ -23,7 +23,7 @@ class WLAN:
                 if b'mibra' in tupl:
                     print('- found SSID mibra, connecting...')
                     if self._display: self._display.write_display('- wlan mibra')
-                    self._wlan.connect('mibra', 'mile2017')
+                    self._wlan.connect('******', '******')
                     while not self._wlan.isconnected():
                         pass
                     self._ip = self._wlan.ifconfig()
