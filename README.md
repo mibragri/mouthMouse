@@ -6,7 +6,7 @@ These people for instance cannot move any of their extermities up to very severe
 The extreme case, where people cannot move or hold their head, their head needs to be fixed with a strap band. They are only able to do facials, use their mouth, their tounge.
 These people are also artificially respirated, which means they cannot puff air, but are limited to use the available air in their mouth and contract their cheeks to simulate puffing.
 ## What is the intention of this project?
-Such commercial mice can be very expensive up to 2.160 EUR (what I have seen). Not all health insurances pay for this. They pay in Germany, Switzerland, Denmark, Norway and Sweden for instance but not in Austria.
+Such commercial mice can be very expensive up to 2.000 EUR (what I have seen). Not all health insurances pay for this. They pay in Germany, Switzerland, Denmark, Norway and Sweden for instance but not in Austria.
 This mouse is approx. 32 EUR (ESP32 chip [10 EUR], joystick [2 EUR], water flow sensor [10 EUR], wires [7 EUR], silicon tube [3 EUR]). The code to make this work is for free and will be kept freely available forever.
 It is intended to make this available at no cost, but the parts one needs to buy. It is kept very simplistic in terms of required parts, which are available everywhere to make sure everyone has access and is able to build this.
 ## What are the features of the mouse?
